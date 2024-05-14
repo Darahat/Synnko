@@ -1,9 +1,5 @@
 <template>
-  <v-card
-    class="mx-auto my-8"
-    elevation="16"
-    max-width="344"
-  >
+  <v-card class="mx-auto my-8" elevation="16" max-width="345">
     <v-card-item>
       <v-card-title>
         Synnko's Cost Form
@@ -12,9 +8,9 @@
 
     <v-card-text>
       <ClearButton @clearFieldButtonClick="clearInput" />
-      <ConstField   v-model="numberValue" :submitInputValue = submitInputValue :clearInputValue  = clearInputValue />
-      <DatePicker :submitInputValue = submitInputValue  :clearInputValue  = clearInputValue />
-      <submitButton @submitButtonClicked = "SubmitInput" />
+      <ConstField v-model="numberValue" :submitInputValue=submitInputValue :clearInputValue=clearInputValue />
+      <DatePicker :submitInputValue=submitInputValue :clearInputValue=clearInputValue />
+      <submitButton @submitButtonClicked="SubmitInput" />
     </v-card-text>
   </v-card>
 </template>
@@ -29,10 +25,10 @@ const clearInputValue = ref(false);
 const submitInputValue = ref(false);
 const SubmitInput = (value) => {
   submitInputValue.value = value;
- }
+}
 
 const clearInput = (value) => {
   clearInputValue.value = value;
- };
+};
 
 </script>
